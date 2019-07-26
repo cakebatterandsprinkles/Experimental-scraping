@@ -1,0 +1,26 @@
+<div class="col-sm-3" style="padding-bottom: 1em;">
+    <div class="card text-white bg-light border-dark mb-3" style="height: 100%;" >
+        <img class="card-img-top" src='http://books.toscrape.com/{{this.img}}' alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a href='http://books.toscrape.com/{{this.link}}'>
+                    {{this.title}}
+                </a>
+            </h5>
+        </div>
+        <div class="card-footer" style="padding: 0;">
+            {{#unless this.saved}}
+            <button class="save-button btn btn-primary btn-block" style="border-radius:0;" data-id="{{this._id}}" data-saved="{{this.saved}}">
+                Save this book!
+            </button>
+            {{else}}
+            <button class="save-button btn btn-danger btn-block"style="border-radius:0;" data-id="{{this._id}}" data-saved="{{this.saved}}">
+                Unsave this book!
+            </button>
+            <button class="note-button btn btn-primary btn-block" style="margin: 0; border-radius:0;" data-id="{{this._id}}">
+                Add Notes
+            </button>
+            {{/unless}}
+        </div>
+    </div>
+</div>
